@@ -29,7 +29,7 @@ void Cube::updateActor(float dt)
 	}
 	q = Quaternion::concatenate(q, Quaternion(Vector3::unitZ, rotation.x / 100));
 	q = Quaternion::concatenate(q, Quaternion(Vector3::unitY, rotation.y / 100));
-	setRotation(q);
+	setRotation(Quaternion::concatenate(getRotation(),q));
 }
 
 void Cube::actorInput(SDL_MouseButtonEvent& mouseEvent)
