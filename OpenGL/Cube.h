@@ -13,6 +13,6 @@ private:
 	bool tourne;
 	Vector2 rotation;
 	Vector2 velocite;
-	int x1, xMouse;
+	int x1, xMouse, y1, yMouse;
 };
 
